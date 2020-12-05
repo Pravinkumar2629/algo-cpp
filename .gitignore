@@ -2,3 +2,5 @@ launch.json
 /.vscode
 
 #/home/pravinkumar/.ssh/id_rsa.pub
+
+/.metadata/

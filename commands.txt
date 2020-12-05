@@ -1,0 +1,19 @@
+git remote set-url origin git+ssh://git@github.com/Pravinkumar2629/algo-cpp.git
+
+git init
+
+git push
+
+git push origin main
+
+git add . 
+
+git add --all
+
+git add <filename>
+
+git rm -r <Directory>
+
+git branch
+
+git commit -m ''
