@@ -1,19 +1,38 @@
-git remote set-url origin git+ssh://git@github.com/Pravinkumar2629/algo-cpp.git
 
+I am just starting with git soooo,
+
+echo "# algo-cpp" >> README.md
 git init
-
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Pravinkumar2629/algo-cpp.git
+git push -u origin main
+git remote set-url origin git+ssh://git@github.com/Pravinkumar2629/algo-cpp.git
+git init
 git push
-
 git push origin main
-
 git add . 
-
 git add --all
-
 git add <filename>
-
 git rm -r <Directory>
-
 git branch
-
 git commit -m ''
+git show-ref
+
+
+
+    Create a repository on GitHub
+    Delete existing .git file on your local directory
+    Go to local project directory and type git init
+    git add .
+    git commit -m"My First Commmit"
+    Now check your branch name it will be master in your local project
+    git remote add origin <remote repository URL past here from the github repository> then type git remote -v
+    git push -f origin master
+    Now check the github repository you will see two branch 1. main 2. master
+    In your local repository create new branch and the branch name will be main
+    git checkout main
+    git merge master
+    git pull origin main
+    git push -f origin main
