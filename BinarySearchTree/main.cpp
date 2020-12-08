@@ -49,12 +49,27 @@ private:
 		}
 		return branch;
 	}
+	void _print_pre_order(Node *node) {
+		if (node == NULL)
+			return;
+		std::cout << node->data << '\t';
+		_print_pre_order(node->left);
+		_print_pre_order(node->right);
+	}
+	void _print_post_order(Node *node) {
+		if (node == NULL)
+			return;
+		_print_post_order(node->left);
+		_print_post_order(node->right);
+		std::cout << node->data << '\t';
+	}
+
 	void _print(Node *node) {
 		if (node == nullptr) {
 			return;
 		} else {
 			_print(node->left);
-			std::cout << " " << node->data << " ";
+			std::cout << node->data << "\t";
 			_print(node->right);
 		}
 	}
@@ -77,6 +92,10 @@ public:
 	}
 	void print() {
 		_print(root);
+		std::cout << std::endl;
+		_print_pre_order(root);
+		std::cout << std::endl;
+		_print_post_order(root);
 	}
 	void search(int data) {
 		Node *result = _search(root, data);
