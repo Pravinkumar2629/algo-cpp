@@ -58,12 +58,34 @@ private:
 			_print(node->right);
 		}
 	}
+
+	Node* _search(Node *branch, int data) {
+		if (branch != nullptr) {
+			if (data < branch->data) {
+				return _search(branch->left, data);
+			} else if (data > branch->data) {
+				return _search(branch->right, data);
+			} else if (data == branch->data) {
+				return branch;
+			}
+		}
+		return nullptr;
+	}
 public:
 	void insert(int data) {
 		root = _insert(root, data);
 	}
-	void Print() {
+	void print() {
 		_print(root);
+	}
+	void search(int data) {
+		Node *result = _search(root, data);
+		if (result == nullptr) {
+			std::cout << "Searched item not found!" << std::endl;
+		}
+		if (result != nullptr) {
+			std::cout << "item found!" << std::endl;
+		}
 	}
 
 	~BST() {
@@ -83,6 +105,7 @@ int main() {
 	bst.insert(7);
 	bst.insert(40);
 	bst.insert(50);
-	bst.Print();
+	bst.search(7);
+	bst.print();
 	std::cout << "BST main end ()" << std::endl;
 }
