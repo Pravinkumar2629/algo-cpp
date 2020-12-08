@@ -39,11 +39,18 @@ std::string ReverseIterators(const std::string& str){
 }
 
 int main() {
-	std::string s = "Hello world";
+
+
+	//std::string s = "Hello world";
+	std::string sInput{};
+	std::cout << "Enter your name " << std::endl;
+	std::cin >> sInput;
 	char str[] = "hello world";
-	std::cout << "Ordinary string " << s << std::endl;
+	//std::cout << "Ordinary string " << sInput << std::endl;
 	//Reverse_String(s);
 	//ReverseBySwap(str);
-	std::string str2 = ReverseIterators(s);
-	std::cout << "After reversing " << str2 << std::endl;
+	std::string str2 = ReverseIterators(sInput);
+	//std::cout << "After reversing " << str2 << std::endl;
+	std::cout << str2;
+
 }
